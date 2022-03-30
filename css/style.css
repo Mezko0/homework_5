@@ -87,11 +87,12 @@ body {
 
 .header {
   height: 740px;
-  background: url("../../img/Background.jpg") 0 0/100% auto no-repeat;
+  background: url("../../img/Background.jpg") 0 0/100% 100% no-repeat;
 }
 
 .header .header-top {
   overflow: hidden;
+  margin: 0px 0px 120px 0px;
 }
 
 .header__logo {
