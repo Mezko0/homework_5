@@ -1,47 +1,185 @@
 // Файл обнуляющих стилей
 @import "_nullstyle";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;500;700&display=swap");
 
-// Переменные для блока
-$fz: 100px;
-$color_1: #000;
-$color_2: #fff;
+body {
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	position: relative;
+}
 
-// Шаблон №1
-.tplborder {
-	font-size: 100px;
-	border-bottom: 5px dashed red;
+.container {
+	width: 1110px;
+	margin: 0 auto;
 }
-@mixin fontz($f, $c) {
-	font-size: $f;
-	color: $c;
+
+.wraper {
 }
-.block {
-	width: 300px / 960px * 100%;
-	background-color: #666;
-	padding: 30px;
-	line-height: 60px;
-	.block__text {
-		font-size: $fz;
-		span {
-			color: green;
+.header {
+	height: 740px;
+	background: url("../../img/Background.jpg") 0 0/100%auto no-repeat;
+	.header-top {
+		overflow: hidden;
+	}
+	&__logo {
+		float: left;
+		margin: 30px 0px 0px 0px;
+	}
+
+	&__burger {
+		margin: 30px 0px 0px 0px;
+		float: right;
+		background-color: #f7654a;
+		width: 50px;
+		height: 50px;
+		padding: 15px;
+
+		.burger-line {
+			background-color: #fff;
+			height: 3px;
+			width: 20px;
+			margin: 3px auto;
+			border-radius: 1px;
 		}
 	}
-}
-.link {
-	@include fontz(80px, green);
-	color: $color_1;
-	text-decoration: underline;
-	font-size: $fz;
-	.block & {
-		font-size: $fz;
+
+	&__title {
+		width: 734px;
+		font-size: 4em;
+		font-weight: 500;
+		text-align: center;
+		margin: 0 auto 35px;
+		color: #fff;
+		text-transform: uppercase;
+		line-height: 95px;
 	}
-	&:hover {
-		color: $color_2;
+
+	&__subtitle {
+		font-size: 1.125em;
+		color: #fff;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0px 0px 150px 0px;
 	}
-	@extend .tplborder;
 }
-.link-2 {
-	@include fontz(50px, green);
-	border-bottom: 5px dashed #000;
-	@extend .tplborder;
+
+.numbers {
+	position: relative;
+	background: #f7f7f7;
+	width: 1110px;
+	height: 300px;
+	margin: 0 auto -50px;
+	top: -150px;
+}
+.numbers-row {
+	display: flex;
+	justify-content: space-around;
+}
+.numbers-column {
+	flex: 0 0 190px;
+	font-weight: 500;
+
+	&__number {
+		font-size: 4.5em;
+		color: #f7654a;
+		text-align: center;
+		margin: 80px 0px 35px 0px;
+	}
+
+	&__title {
+		font-size: 2.25em;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__subtitle {
+		font-size: 1.125em;
+		color: #999999;
+		text-align: center;
+	}
+}
+
+.main {
+}
+.projects {
+	&__title {
+		color: #404149;
+		font-size: 2.25em;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 500;
+		margin: 0px 0px 60px 0px;
+	}
+}
+.projects-row {
+	display: flex;
+	justify-content: space-between;
+}
+.projects-column {
+	flex: 0 0 33.333%;
+	&__image {
+		margin: 0px 0px 45px 0px;
+	}
+
+	&__separator {
+		display: inline-block;
+		width: 55px;
+		height: 6px;
+		background-color: #f7654a;
+		margin: 0px 0px 25px 0px;
+	}
+
+	&__title {
+		color: #404149;
+		font-size: 1.5em;
+		font-weight: 500;
+		margin: 0px 0px 25px 0px;
+	}
+
+	&__description {
+		color: #999999;
+		font-family: "Open Sans", sans-serif;
+		line-height: 1.36em;
+		margin: 0px 0px 135px 0px;
+		padding: 0 30px 0 0;
+	}
+}
+.footer {
+	padding: 45px 0 0 0;
+	background: #f7654a;
+	min-height: 180px;
+	.footer-row {
+		display: flex;
+		justify-content: space-between;
+	}
+	.footer-text {
+		display: inline-block;
+		width: 50%;
+	}
+	&__title {
+		font-size: 3em;
+		font-weight: 700;
+		color: #fff;
+		text-transform: uppercase;
+		margin: 45px 0 25px 0;
+	}
+
+	&__subtitle {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 1.5em;
+		margin: 0px 0px 40px 0px;
+	}
+
+	&__button {
+		width: 175px;
+		height: 50px;
+		background: #fff url("../../img/icons/mail.svg") 30px 50% no-repeat;
+		font-size: 0.875em;
+		color: #000;
+		font-weight: 500;
+		padding: 18px 30px 18px 65px;
+		align-self: center;
+	}
 }
